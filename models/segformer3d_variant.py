@@ -1,11 +1,23 @@
-# SegFormer3D (Pancreas & Tumor Segmentation Variant)
-# Modified from the original SegFormer3D (GPLv3) by the SegFormer3D authors.
-# Modifications by Kyriaki Kolpetinou, 2025-09-11.
-# Changes include: Hybrid conv stem, ASPP+FPN decoder, scSE on skips, Attention Gates,
-# depthwise-separable smoothing blocks, auxiliary head from P2, and minor refactoring.
-#
-# Copyright (C) 2025 Kyriaki Kolpetinou
-#
+"""
+SegFormer3D Variant for Pancreatic Tumor Segmentation
+Modified from the original SegFormer3D (GPLv3) by the SegFormer3D authors.
+Modifications by Kyriaki Kolpetinou, 2025-09-11.
+-----------------------------------------------------
+
+Base architecture:
+- SegFormer3D encoder (Perera et al., 2023)
+
+Decoder design:
+- FPN-style top-down pathway with lateral 1x1s (Lin et al., CVPR 2017)
+- ASPP bottleneck (Chen et al., DeepLabV3, 2017)
+- scSE modules in skip connections (Roy et al., MICCAI 2018)
+- Attention Gates for skip filtering (Oktay et al., arXiv 2018)
+- Inspired also by Deng & Mou (ISAIM 2023) for combining ASPP + AG in pancreatic tumor segmentation
+
+This combination is novel in 3D transformer-based segmentation.
+Copyright (C) 2025 Kyriaki Kolpetinou
+"""
+
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
