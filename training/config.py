@@ -1,4 +1,3 @@
-# training/config.py
 
 # Data paths
 DATA_DIR = "/home/kkolpetinou/Task07_Pancreas_Preprocessed"
