@@ -45,40 +45,35 @@ See [`preprocessing/README.md`](preprocessing/README.md) for details.
 
 ---
 
-## 📦 Installation
-Clone this repository and install dependencies:
-```bash
-git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git
-cd PancreasTumorSegmentation
-pip install -r requirements.txt
+✨ Installation:
+  - "git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git"
+  - "cd PancreasTumorSegmentation"
+  - "pip install -r requirements.txt"
 
-🚀 Usage
-1. Preprocessing
-Prepare the dataset with nnU-Net–style preprocessing:
+🚀 Usage:
+  Preprocessing: >
+    python preprocessing/run_preprocessing.py --input /path/to/raw --output /path/to/preprocessed
+    (see preprocessing/README.md for details)
+  Training: >
+    python training/train.py --config training/config.py
+  Inference: >
+    python training/infer.py --checkpoint ./checkpoints/best.ckpt --input /path/to/images --output ./preds
 
-python preprocessing/run_preprocessing.py --input /path/to/raw --output /path/to/preprocessed
-(see preprocessing/README.md for detailed explanation).
+📊 Results (PANTHER Task 1):
+  placement: "4th place overall 🏅"
 
-2. Training
-Train the model:
-python training/train.py --config training/config.py
+📚 References
 
-3. Inference
-Run inference with a trained checkpoint
+- SegFormer3D: Perera et al., *SegFormer3D: an Efficient Transformer for 3D Medical Image Segmentation*, 2023.  
+- nnU-Net preprocessing: Isensee et al., *nnU-Net: a self-adapting framework for U-Net-based medical image segmentation*, Nature Methods 2021.  
+- scSE module: Roy et al., *Concurrent Spatial and Channel Squeeze & Excitation in Fully Convolutional Networks*, MICCAI 2018.  
+- ASPP: Chen et al., *Rethinking Atrous Convolution for Semantic Image Segmentation (DeepLabV3)*, arXiv 2017.  
+- Attention Gates: Oktay et al., *Attention U-Net: Learning Where to Look for the Pancreas*, arXiv 2018.  
+- FPN-style decoder: Lin et al., *Feature Pyramid Networks for Object Detection*, CVPR 2017.  
+- Pancreatic tumor segmentation with ASPP + AG: Deng & Mou, *Pancreatic Tumor Segmentation Based on 3D U-Net with Densely Connected Atrous Spatial Pyramid Module and Attention Module*, ISAIM 2023.  
 
-python training/infer.py --checkpoint ./checkpoints/best.ckpt --input /path/to/images --output ./preds
 
-📊 Results (PANTHER Task 1)
-4th place overall 🏅
-Competitive Dice and Hausdorff95 metrics, close to 3rd place.
-
-📜 License & Attribution
-Code released under GPLv3, following SegFormer3D’s license.
-Preprocessing adapted from nnU-Net (Isensee et al., Nature Methods, 2021).
-Developed by Kyriaki Kolpetinou,
-PhD candidate at NTUA, Biomedical Engineering Laboratory.
-
-🙏 Acknowledgements
-PANTHER Challenge organizers for providing the dataset.
-Prof. George Matsopoulos (NTUA) for supervision.
-SegFormer3D and nnU-Net authors for their original open-source work.
+🙏 Acknowledgements:
+  - "PANTHER Challenge organizers for providing the dataset"
+  - "Prof. George Matsopoulos (NTUA) for supervision"
+---
