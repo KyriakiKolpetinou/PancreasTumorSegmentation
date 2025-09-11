@@ -1,6 +1,6 @@
 # SegFormer3D (Pancreas & Tumor Segmentation Variant)
 # Modified from the original SegFormer3D (GPLv3) by the SegFormer3D authors.
-# Modifications by Kyriaki Kolpetinou, 2025-09-XX.
+# Modifications by Kyriaki Kolpetinou, 2025-09-11.
 # Changes include: Hybrid conv stem, ASPP+FPN decoder, scSE on skips, Attention Gates,
 # depthwise-separable smoothing blocks, auxiliary head from P2, and minor refactoring.
 #
