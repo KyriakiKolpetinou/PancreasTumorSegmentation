@@ -8,11 +8,8 @@ This repository contains the model, training pipeline, and preprocessing descrip
 **🧠 Project Idea**
 
 This work explores whether lightweight transformer-based models, without any pre-training, can achieve competitive performance in 3D medical image segmentation challenges.
-
 Instead of relying on very large models, we design a compact SegFormer3D variant with carefully chosen modules (ASPP, FPN, scSE, Attention Gates).
-
 The goal is to maintain efficiency (low parameter count, memory footprint) while reaching segmentation quality close to state-of-the-art large networks.
-
 Tested on the PANTHER pancreas tumor segmentation challenge, our approach ranked 4th place overall, demonstrating that smaller, efficient models can remain competitive in real-world medical imaging benchmarks.
 
 ---
