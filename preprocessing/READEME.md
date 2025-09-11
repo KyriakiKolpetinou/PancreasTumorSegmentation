@@ -4,7 +4,7 @@ For preprocessing we closely followed the strategy of nnU-Net (Isensee et al., N
 Specifically:
 
 
-Input layout
+*Input layout*
 
 DATASET_ROOT/
 
