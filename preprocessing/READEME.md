@@ -80,3 +80,12 @@ If you do not have this file, compute these statistics over the original .mha vo
 *Attribution*
 
 This procedure mirrors the design choices in nnU-Net for MRI preprocessing (spacing selection, interpolation policies, and non-zero intensity normalisation). 
+
+
+### Example MRI Statistics (from PANTHER Task 1 dataset)
+
+- median spacing: [1.1875, 1.1875, 3.0]  
+- 10th percentile spacing: [1.1875, 1.1875, 3.0]  
+- median size: [320, 260, 72]
+
+Note: These are dataset-specific and should be recomputed for other datasets.
