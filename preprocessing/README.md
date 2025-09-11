@@ -5,7 +5,7 @@ For preprocessing we closely followed the strategy of nnU-Net
 👉 [https://github.com/MIC-DKFZ/nnUNet] 
 
 
-*Input layout*
+**Input layout**
 
 DATASET_ROOT/
 
@@ -16,7 +16,7 @@ DATASET_ROOT/
   mri_statistics.csv   # per-dataset spacing statistics (see below)
 
 
-*Pairing rule*
+**Pairing rule**
 
 Images and labels are matched by filename stem (e.g., 10000_0001_xxx.mha pairs with 10000_0001_yyy.mha).
 Files without a matching pair are skipped (logged as warnings).
@@ -32,23 +32,23 @@ If anisotropic, keep median in-plane spacing and use 10th_percentile_spacing[z] 
 target_spacing = (median_z_replaced_by_10th, median_y, median_x)
 (This mirrors nnU-Net’s handling of anisotropic MRIs.)
 
-*Resampling*
+**Resampling**
 
 Images: cubic B-spline interpolation (order=3).
 Labels: nearest neighbor (order=0).
 Spacing order is handled as (z, y, x).
 After resampling, image and label shapes are asserted to match.
 
-*Intensity normalisation (MRI)*
+**Intensity normalisation (MRI)**
 Compute mean and std only over non-zero voxels of each image.
 Z-score normalise: (image - mean) / std.
 (If an image has no non-zero voxels, it’s left unchanged as a fallback.)
 
-*Label handling*
+**Label handling**
 Any negative label values are set to 0 before saving.
 Label dtype is kept small (int8 if max label ≤ 127, else int16).
 
-*Output format*
+**Output format**
 
 OUTPUT_ROOT/
 
@@ -57,26 +57,23 @@ OUTPUT_ROOT/
   labelsTr/  # {label_stem}.npz
 
 
-*Each .npz contains:*
+**Each .npz contains:**
 
 arr_0: the array shaped (1, D, H, W) — a channel-first 3D volume.
 spacing: a 3-float numpy array with the target voxel spacing (z, y, x).
 
-*What this lets you reproduce*
+**What this lets you reproduce**
 
 Resampling to a robust, dataset-specific spacing (median; anisotropy-aware on z).
 MRI-style z-score normalisation on non-zero voxels.
 Safe label resampling.
 Deterministic pairing between images/labels and a consistent .npz layout your dataloader can consume.
 
-*Notes*
-The script expects an mri_statistics.csv with at least the columns:
-median_spacing
-10th_percentile_spacing
-
+**Notes**
+The script expects an mri_statistics.csv with columns: median_spacing, 10th_percentile_spacing, median size
 If you do not have this file, compute these statistics over the original .mha volumes first.
 
-*Attribution*
+**Attribution**
 
 This procedure mirrors the design choices in nnU-Net for MRI preprocessing (spacing selection, interpolation policies, and non-zero intensity normalisation). 
 
