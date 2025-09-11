@@ -7,8 +7,11 @@ Specifically:
 Input layout
 
 DATASET_ROOT/
+
   ImagesTr/   # .mha volumes
+  
   LabelsTr/   # .mha segmentation masks (same filename stem as image)
+  
   mri_statistics.csv   # per-dataset spacing statistics (see below)
 
 
@@ -52,7 +55,9 @@ Output format
 Preprocessed files are written to:
 
 OUTPUT_ROOT/
+
   imagesTr/  # {image_stem}.npz
+  
   labelsTr/  # {label_stem}.npz
 
 
