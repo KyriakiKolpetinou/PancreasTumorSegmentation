@@ -23,7 +23,6 @@ Voxel spacing selection (per dataset)
 Read from mri_statistics.csv:
 median_spacing (z, y, x) as strings like "[1.0 0.8 0.8]".
 10th_percentile_spacing (z, y, x).
-
 Target spacing is:
 median_spacing unless strong anisotropy is detected, defined as
 median_spacing[z] / median_spacing[x] >= 3.
@@ -49,7 +48,6 @@ Any negative label values are set to 0 before saving.
 Label dtype is kept small (int8 if max label ≤ 127, else int16).
 
 *Output format*
-Preprocessed files are written to:
 
 OUTPUT_ROOT/
 
