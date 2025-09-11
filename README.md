@@ -45,32 +45,40 @@ See [`preprocessing/README.md`](preprocessing/README.md) for details.
 
 ---
 
-## ⚙️ Requirements
-
-Install dependencies:
-
+## 📦 Installation
+Clone this repository and install dependencies:
 ```bash
+git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git
+cd PancreasTumorSegmentation
 pip install -r requirements.txt
+
 🚀 Usage
-Preprocess your dataset following preprocessing.
-Train using the training scripts.
-Save in ./checkpoints
+1. Preprocessing
+Prepare the dataset with nnU-Net–style preprocessing:
+
+python preprocessing/run_preprocessing.py --input /path/to/raw --output /path/to/preprocessed
+(see preprocessing/README.md for detailed explanation).
+
+2. Training
+Train the model:
+python training/train.py --config training/config.py
+
+3. Inference
+Run inference with a trained checkpoint
+
+python training/infer.py --checkpoint ./checkpoints/best.ckpt --input /path/to/images --output ./preds
 
 📊 Results (PANTHER Task 1)
-Achieved 4th place overall 
-Competitive Dice and Hausdorff metrics, close to 3rd place.
+4th place overall 🏅
+Competitive Dice and Hausdorff95 metrics, close to 3rd place.
 
 📜 License & Attribution
-Model code released under GPLv3, following SegFormer3D’s license.
-
-Preprocessing adapted from nnU-Net (Isensee et al., 2021).
-
+Code released under GPLv3, following SegFormer3D’s license.
+Preprocessing adapted from nnU-Net (Isensee et al., Nature Methods, 2021).
 Developed by Kyriaki Kolpetinou,
 PhD candidate at NTUA, Biomedical Engineering Laboratory.
 
 🙏 Acknowledgements
 PANTHER Challenge organizers for providing the dataset.
-
 Prof. George Matsopoulos (NTUA) for supervision.
-
 SegFormer3D and nnU-Net authors for their original open-source work.
