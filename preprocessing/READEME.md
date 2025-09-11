@@ -1,7 +1,8 @@
-*Preprocessing (nnU-Net–style for MRI)*
+## Preprocessing (nnU-Net–style for MRI)
 
-For preprocessing we closely followed the strategy of nnU-Net (Isensee et al., Nature Methods, 2021): [https://github.com/MIC-DKFZ/nnUNet]
-Specifically:
+For preprocessing we closely followed the strategy of nnU-Net  
+(Isensee et al., Nature Methods, 2021):  
+👉 [https://github.com/MIC-DKFZ/nnUNet] 
 
 
 *Input layout*
