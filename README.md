@@ -7,7 +7,7 @@ This repository contains the model, training pipeline, and preprocessing descrip
 
 **🧠 Project Idea**
 
-This work explores whether lightweight transformer-based models can achieve competitive performance in 3D medical image segmentation challenges.
+This work explores whether lightweight transformer-based models, without any pre-training, can achieve competitive performance in 3D medical image segmentation challenges.
 
 Instead of relying on very large models, we design a compact SegFormer3D variant with carefully chosen modules (ASPP, FPN, scSE, Attention Gates).
 
