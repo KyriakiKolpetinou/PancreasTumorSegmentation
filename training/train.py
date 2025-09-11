@@ -2,7 +2,7 @@ import training.config as cfg
 from models.segformer3d_variant import SegFormer3D
 from training.config import *
 from training.data import PanoramaDataModule
-from training.lit_module import Net
+from training.net import Net
 from training.utils import set_global_seed, make_warmup_poly
 import lightning as L
 from lightning.pytorch.callbacks import ModelCheckpoint, EarlyStopping
