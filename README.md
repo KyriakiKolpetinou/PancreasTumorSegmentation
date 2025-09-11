@@ -51,13 +51,19 @@ See [`preprocessing/README.md`](preprocessing/README.md) for details.
   - "pip install -r requirements.txt"
 
 🚀 Usage:
-  Preprocessing: >
-    python preprocessing/run_preprocessing.py --input /path/to/raw --output /path/to/preprocessed
-    (see preprocessing/README.md for details)
+  We followed the MRI preprocessing strategy of nnU-Net (Isensee et al., Nature Methods 2021).
+  See preprocessing/README.md for details on spacing, normalization, and .npz export.
+  You need preprocessed data in Task07_Pancreas_Preprocessed/ before training.
+  
   Training: >
     python training/train.py --config training/config.py
+    
   Inference: >
-    python training/infer.py --checkpoint ./checkpoints/best.ckpt --input /path/to/images --output ./preds
+    python inference/infer.py \
+    --checkpoint ./checkpoints/best_model.ckpt \
+    --input /path/to/case.mha \
+    --output ./preds/tumor_seg.mha \
+    --stats_csv ./mri_statistics.csv
 
 📊 Results (PANTHER Task 1):
   placement: "4th place overall 🏅"
