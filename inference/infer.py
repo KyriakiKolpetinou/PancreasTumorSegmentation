@@ -2,8 +2,6 @@
 # Part of PancreasTumorSegmentation (GPLv3).
 # Based on SegFormer3D (Perera et al., 2023). 
 # Postprocessing inspired by nnU-Net and related challenge heuristics.
-
-# inference.py — SegFormer3D + TTA for PANTHER Task 1 (binary tumor output)
 # Input:  /input/images/<folder-with-"mri">/*.mha
 # Output: /output/images/pancreatic-tumor-segmentation/tumor_seg.mha
 # Classes during training: 0=background, 1=tumor, 2=pancreas
