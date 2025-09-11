@@ -4,6 +4,18 @@ Official code release for our method in the **PANTHER Challenge (MICCAI 2025, Ta
 This repository contains the model, training pipeline, and preprocessing description used to achieve **4th place**.
 
 ---
+
+**🧠 Project Idea**
+
+This work explores whether lightweight transformer-based models can achieve competitive performance in 3D medical image segmentation challenges.
+
+Instead of relying on very large models, we design a compact SegFormer3D variant with carefully chosen modules (ASPP, FPN, scSE, Attention Gates).
+
+The goal is to maintain efficiency (low parameter count, memory footprint) while reaching segmentation quality close to state-of-the-art large networks.
+
+Tested on the PANTHER pancreas tumor segmentation challenge, our approach ranked 4th place overall, demonstrating that smaller, efficient models can remain competitive in real-world medical imaging benchmarks.
+
+---
 ## 🔬 Model
 
 - **Base architecture:** SegFormer3D (GPLv3).  
