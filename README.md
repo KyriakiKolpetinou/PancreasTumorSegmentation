@@ -71,7 +71,7 @@ The training scripts use **fixed configuration** from `training/config.py`.
 **1) Configure paths & hyper-params**
     Open training/config.py and set:
     
-    DATA_DIR → folder with your **preprocessed** dataset 
+    DATA_DIR → folder with your preprocessed dataset 
     
     Expected layout: 
     DATA_DIR/
@@ -114,11 +114,11 @@ Please arrange your files as shown below before running.
    mkdir -p model
    cp /path/to/mri_statistics.csv model/mri_statistics.csv
 3. **Put your input case under /input/images/ in a folder containing "mri" in its name:**
+   
    sudo mkdir -p /input/images/abdominal-t1-mri
-
    sudo cp /path/to/case.mha /input/images/abdominal-t1-mri/
 
-4. **run the inference**
+5. **run the inference**
    python inference/infer.py
 ---
 
