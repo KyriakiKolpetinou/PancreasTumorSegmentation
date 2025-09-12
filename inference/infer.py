@@ -20,9 +20,9 @@ import os
 
 
 def mm_to_vox(r_mm, spacing):
-    # r_mm σε mm, spacing=(sx,sy,sz) σε mm → ακτίνα σε voxels ανά άξονα
+    # r_mm σε mm, spacing=(sx,sy,sz) σε mm 
     sx, sy, sz = spacing
-    #  σφαίρα σε ισοτροπικό περίπου grid: μέση τιμή spacing
+    
     s = float((sx + sy + sz) / 3.0 + 1e-6)
     return max(1, int(round(r_mm / s)))
 
