@@ -53,12 +53,12 @@ Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).
 
 ---
 
-✨ Installation:
+**✨ Installation:**
   - "git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git"
   - "cd PancreasTumorSegmentation"
   - "pip install -r requirements.txt"
 
-🚀 Usage:
+**🚀 Usage:**
   We followed the MRI preprocessing strategy of nnU-Net (Isensee et al., Nature Methods 2021).
   You need preprocessed data in Task07_Pancreas_Preprocessed/ before training.
 
@@ -107,13 +107,15 @@ Please arrange your files as shown below before running.
 
 1. **Place your trained checkpoint**
    mkdir -p checkpoints
-   cp /path/to/best_model.ckpt checkpoints/best_model.ckpt
+   cp /path/to/best_model.ckpt     checkpoints/best_model.ckpt
 2. **Place the spacing statistics** (already computed from the preprocessing step)
    mkdir -p model
    cp /path/to/mri_statistics.csv model/mri_statistics.csv
 3. **Put your input case under /input/images/ in a folder containing "mri" in its name:**
    sudo mkdir -p /input/images/abdominal-t1-mri
+
    sudo cp /path/to/case.mha /input/images/abdominal-t1-mri/
+
 4. **run the inference**
    python inference/infer.py
 ---
