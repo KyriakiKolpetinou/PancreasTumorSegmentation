@@ -45,8 +45,7 @@ Key parameters are defined in [`training/config.py`](training/config.py).
 
 ## 🏗 Preprocessing
 
-Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).  
-See [`preprocessing/README.md`](preprocessing/README.md) for details.  
+Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).    
 - Spacing normalisation (median / anisotropy-aware).  
 - Z-score normalisation on non-zero voxels.  
 - Safe label resampling.  
@@ -61,7 +60,6 @@ See [`preprocessing/README.md`](preprocessing/README.md) for details.
 
 🚀 Usage:
   We followed the MRI preprocessing strategy of nnU-Net (Isensee et al., Nature Methods 2021).
-  See preprocessing/README.md for details on spacing, normalization, and .npz export.
   You need preprocessed data in Task07_Pancreas_Preprocessed/ before training.
   
   Training: >
