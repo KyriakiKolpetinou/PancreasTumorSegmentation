@@ -45,7 +45,7 @@ Key parameters are defined in [`training/config.py`](training/config.py).
 
 ## 🏗 Preprocessing
 
-Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).    
+Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021) [https://github.com/MIC-DKFZ/nnUNet].
 - Spacing normalisation (median / anisotropy-aware).  
 - Z-score normalisation on non-zero voxels.  
 - Safe label resampling.  
