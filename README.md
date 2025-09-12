@@ -65,12 +65,34 @@ Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).
   Training: >
     python training/train.py --config training/config.py
     
-  Inference: >
-    python inference/infer.py \
-    --checkpoint ./checkpoints/best_model.ckpt \
-    --input /path/to/case.mha \
-    --output ./preds/tumor_seg.mha \
-    --stats_csv ./mri_statistics.csv
+## 🚀 Inference
+
+The inference script uses **fixed paths**.  
+Please arrange your files as shown below before running.
+
+### 📂 Expected paths
+- **Checkpoint** → `./checkpoints/best_model.ckpt`  
+- **Statistics CSV** → `./model/mri_statistics.csv`  
+- **Input case** → `/input/images/<folder-with-"mri">/case.mha`  
+  - Example: `/input/images/abdominal-t1-mri/case.mha`  
+- **Output** → `./output/images/tumor_seg.mha`
+
+---
+
+### 📝 Steps
+
+1. **Place your trained checkpoint**
+   mkdir -p checkpoints
+   cp /path/to/best_model.ckpt checkpoints/best_model.ckpt
+2. **Place the spacing statistics**
+   mkdir -p model
+   cp /path/to/mri_statistics.csv model/mri_statistics.csv
+3. **Put your input case under /input/images/ in a folder containing "mri" in its name:**
+   sudo mkdir -p /input/images/abdominal-t1-mri
+   sudo cp /path/to/case.mha /input/images/abdominal-t1-mri/
+4. **run the inference**
+   python inference/infer.py
+
 
 📊 Results (PANTHER Task 1):
   placement: "4th place overall 🏅"
