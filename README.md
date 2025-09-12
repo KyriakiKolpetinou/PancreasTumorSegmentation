@@ -69,6 +69,7 @@ Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).
 The training scripts use **fixed configuration** from `training/config.py`.
 
 **1) Configure paths & hyper-params**
+
      Open `training/config.py` and set:
     `DATA_DIR` → folder with your **preprocessed** dataset  
     Expected layout: 
@@ -77,6 +78,7 @@ The training scripts use **fixed configuration** from `training/config.py`.
     labelsTr/ case_000.npz, case_001.npz, ...
 
 **Each `.npz` must contain `arr_0` with shapes:**
+
 - image: `(1, D, H, W)` as float32 
 - label: `(1, D, H, W)` as uint8 (0=bg, 1=tumor, 2=pancreas)
 - `CHECKPOINT_DIR`, `LOG_NAME`, and the rest of the hyper-params if needed  
