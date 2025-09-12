@@ -109,16 +109,20 @@ Please arrange your files as shown below before running.
 
 1. **Place your trained checkpoint**
    mkdir -p checkpoints
-   cp /path/to/best_model.ckpt     checkpoints/best_model.ckpt
-2. **Place the spacing statistics** (already computed from the preprocessing step)
+   
+   cp /path/to/best_model.ckpt checkpoints/best_model.ckpt
+3. **Place the spacing statistics** (already computed from the preprocessing step)
+   
    mkdir -p model
+   
    cp /path/to/mri_statistics.csv model/mri_statistics.csv
-3. **Put your input case under /input/images/ in a folder containing "mri" in its name:**
+4. **Put your input case under /input/images/ in a folder containing "mri" in its name:**
    
    sudo mkdir -p /input/images/abdominal-t1-mri
+   
    sudo cp /path/to/case.mha /input/images/abdominal-t1-mri/
 
-5. **run the inference**
+6. **run the inference**
    python inference/infer.py
 ---
 
