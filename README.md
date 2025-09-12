@@ -89,7 +89,7 @@ Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).
 🙏 Acknowledgements:
   - PANTHER Challenge organizers for providing the dataset
   - Prof. George Matsopoulos (NTUA) for supervision
-  - 
+    
 
 ## 📄 License
 This repository is released under the GPLv3 license, following the original SegFormer3D implementation.
