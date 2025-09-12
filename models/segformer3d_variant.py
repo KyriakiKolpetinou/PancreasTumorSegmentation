@@ -13,6 +13,7 @@ Decoder design:
 - scSE modules in skip connections (Roy et al., MICCAI 2018)
 - Attention Gates for skip filtering (Oktay et al., arXiv 2018)
 - Inspired also by Deng & Mou (ISAIM 2023) for combining ASPP + AG in pancreatic tumor segmentation
+- Depthwise-separable 3D convolution (depthwise k×k×k + pointwise 1×1×1) (Chollet, Xception: Deep Learning with Depthwise Separable Convolutions, CVPR 2017.)
 
 This combination is novel in 3D transformer-based segmentation.
 Copyright (C) 2025 Kyriaki Kolpetinou
