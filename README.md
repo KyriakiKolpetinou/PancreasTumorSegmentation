@@ -89,6 +89,6 @@ See [`preprocessing/README.md`](preprocessing/README.md) for details.
 
 
 🙏 Acknowledgements:
-  - "PANTHER Challenge organizers for providing the dataset"
-  - "Prof. George Matsopoulos (NTUA) for supervision"
+  - PANTHER Challenge organizers for providing the dataset
+  - Prof. George Matsopoulos (NTUA) for supervision
 ---
