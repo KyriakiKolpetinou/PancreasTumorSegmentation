@@ -82,7 +82,6 @@ labelsTr/ case_000.npz, case_001.npz, ...
 (batch size, patch size, LR, steps, etc.).
 
 **2) Install requirements**
-```bash
 pip install -r requirements.txt
 
 **3) Run training**
