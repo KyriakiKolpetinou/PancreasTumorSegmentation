@@ -134,7 +134,8 @@ Please arrange your files as shown below before running.
 - ASPP: Chen et al., *Rethinking Atrous Convolution for Semantic Image Segmentation (DeepLabV3)*, arXiv 2017.  
 - Attention Gates: Oktay et al., *Attention U-Net: Learning Where to Look for the Pancreas*, arXiv 2018.  
 - FPN-style decoder: Lin et al., *Feature Pyramid Networks for Object Detection*, CVPR 2017.  
-- Pancreatic tumor segmentation with ASPP + AG: Deng & Mou, *Pancreatic Tumor Segmentation Based on 3D U-Net with Densely Connected Atrous Spatial Pyramid Module and Attention Module*, ISAIM 2023.  
+- Pancreatic tumor segmentation with ASPP + AG: Deng & Mou, *Pancreatic Tumor Segmentation Based on 3D U-Net with Densely Connected Atrous Spatial Pyramid Module and Attention Module*, ISAIM 2023.
+- Depthwise-separable 3D convolution: Chollet, *Xception: Deep Learning with Depthwise Separable Convolutions, CVPR 2017*.
 
 
 **🙏 Acknowledgements:**
