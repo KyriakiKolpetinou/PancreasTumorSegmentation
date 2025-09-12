@@ -43,7 +43,7 @@ def postprocess_tumor(
     keep_second_ratio: float = 0.20,
     pancreas_dilate_mm: float = 6.0,
 ):
-    # 1) threshold
+    # threshold
     pred = (tumor_prob >= thr).astype(np.uint8)
 
     if pred.sum() == 0:
@@ -58,7 +58,7 @@ def postprocess_tumor(
     if pred.sum() == 0:
         return pred
 
-    # 3) connected components
+    # connected components
     lab, num = ndi.label(pred)
     if num == 0:
         return pred
@@ -69,7 +69,7 @@ def postprocess_tumor(
     sizes_vox = np.asarray(sizes_vox, dtype=np.float64)
     sizes_mm3 = sizes_vox * vox_vol_mm3
 
-    # 3a) exclude small cc
+    # exclude small cc
     total_mm3 = float(pred.sum()) * vox_vol_mm3
     dyn_min_mm3 = max(min_mm3, 0.0005 * total_mm3)  # 0.05%
     keep_mask = sizes_mm3 >= dyn_min_mm3
@@ -80,7 +80,7 @@ def postprocess_tumor(
         # if too strict keep larger c
         kept_ids = [int(np.argmax(sizes_mm3) + 1)]
 
-    # 3b) up to 2 cc
+    # up to 2 cc
     kept_sizes = sizes_mm3[kept_ids - 1]
     order = np.argsort(-kept_sizes)
     kept_ids = np.asarray(kept_ids)[order]
@@ -92,7 +92,7 @@ def postprocess_tumor(
 
     pred2 = np.isin(lab, final_ids).astype(np.uint8)
 
-    # 4) close to pancreas
+    # close to pancreas
     if pancreas_prob is not None:
         pan = (pancreas_prob >= 0.5).astype(np.uint8)
         if pan.any():
