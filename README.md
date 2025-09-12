@@ -87,7 +87,8 @@ The training scripts use **fixed configuration** from `training/config.py`.
 pip install -r requirements.txt
 
 **3) Run training**
- python training/train.py
+
+     python training/train.py
 ---
     
 ## 🚀 Inference
