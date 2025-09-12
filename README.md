@@ -70,7 +70,9 @@ The training scripts use **fixed configuration** from `training/config.py`.
 
 **1) Configure paths & hyper-params**
     Open training/config.py and set:
-    DATA_DIR → folder with your **preprocessed** dataset  
+    
+    DATA_DIR → folder with your **preprocessed** dataset 
+    
     Expected layout: 
     DATA_DIR/
     imagesTr/ case_000.npz, case_001.npz, ...
