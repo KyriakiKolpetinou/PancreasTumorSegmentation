@@ -126,9 +126,6 @@ Please arrange your files as shown below before running.
    python inference/infer.py
 ---
 
-**📊 Results (PANTHER Task 1):**
-  placement: "4th place overall 🏅"
-
 **📚 References**
 
 - SegFormer3D: Perera et al., *SegFormer3D: an Efficient Transformer for 3D Medical Image Segmentation*, 2023.  
@@ -141,9 +138,7 @@ Please arrange your files as shown below before running.
 
 
 **🙏 Acknowledgements:**
-  - PANTHER Challenge organizers for providing the dataset
-  - Prof. George Matsopoulos (NTUA) for supervision
-    
+PANTHER Challenge organizers for providing the dataset and the challenge.  
 
 ## 📄 License
 This repository is released under the GPLv3 license, following the original SegFormer3D implementation.
