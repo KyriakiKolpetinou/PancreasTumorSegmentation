@@ -77,8 +77,6 @@ Please arrange your files as shown below before running.
   - Example: `/input/images/abdominal-t1-mri/case.mha`  
 - **Output** → `./output/images/tumor_seg.mha`
 
----
-
 ### 📝 Steps
 
 1. **Place your trained checkpoint**
@@ -92,12 +90,12 @@ Please arrange your files as shown below before running.
    sudo cp /path/to/case.mha /input/images/abdominal-t1-mri/
 4. **run the inference**
    python inference/infer.py
+---
 
-
-📊 Results (PANTHER Task 1):
+**📊 Results (PANTHER Task 1):**
   placement: "4th place overall 🏅"
 
-📚 References
+**📚 References**
 
 - SegFormer3D: Perera et al., *SegFormer3D: an Efficient Transformer for 3D Medical Image Segmentation*, 2023.  
 - nnU-Net preprocessing: Isensee et al., *nnU-Net: a self-adapting framework for U-Net-based medical image segmentation*, Nature Methods 2021.  
@@ -108,7 +106,7 @@ Please arrange your files as shown below before running.
 - Pancreatic tumor segmentation with ASPP + AG: Deng & Mou, *Pancreatic Tumor Segmentation Based on 3D U-Net with Densely Connected Atrous Spatial Pyramid Module and Attention Module*, ISAIM 2023.  
 
 
-🙏 Acknowledgements:
+**🙏 Acknowledgements:**
   - PANTHER Challenge organizers for providing the dataset
   - Prof. George Matsopoulos (NTUA) for supervision
     
