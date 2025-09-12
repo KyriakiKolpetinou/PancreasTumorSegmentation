@@ -54,9 +54,9 @@ Preprocessing follows the **nnU-Net MRI strategy** (Isensee et al., 2021).
 ---
 
 **✨ Installation:**
-  - "git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git"
-  - "cd PancreasTumorSegmentation"
-  - "pip install -r requirements.txt"
+  - git clone https://github.com/KyriakiKolpetinou/PancreasTumorSegmentation.git
+  - cd PancreasTumorSegmentation
+  - pip install -r requirements.txt
 
 **🚀 Usage:**
   We followed the MRI preprocessing strategy of nnU-Net (Isensee et al., Nature Methods 2021).
