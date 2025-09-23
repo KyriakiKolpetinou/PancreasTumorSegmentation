@@ -1,3 +1,6 @@
+from torch.optim.lr_scheduler import LambdaLR
+from monai.utils import set_determinism
+
 def set_global_seed(seed=17):
 
     os.environ["PYTHONHASHSEED"] = str(seed)
